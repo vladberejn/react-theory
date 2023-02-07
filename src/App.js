@@ -43,7 +43,7 @@ class App extends Component {
                     key={index}
                     name={car.name} // пропы, которые я передаю в КАР.ЖС и их значения
                     year={car.year}
-                    onDelete = {this.deleteHandler.bind(this, index)}
+                    onDelete={this.deleteHandler.bind(this, index)}
                     onChangeName={event=>this.onChangeName(event.target.value, index)}
                 />
             )
@@ -55,23 +55,13 @@ class App extends Component {
         <h1>{this.state.pageTitle}</h1>
 
         <button onClick={this.toggleCarsHandler}>Toggle cars</button>
-
-          { cars }
-        {/*<Car*/}
-        {/*    name={cars[0].name}*/}
-        {/*    year={cars[0].yaer}*/}
-        {/*    onChangeTitle ={this.changeTitleHandler.bind(this, cars[0].name)}*/}
-        {/*/>*/}
-        {/*<Car*/}
-        {/*    name={cars[1].name}*/}
-        {/*    year={cars[1].yaer}*/}
-        {/*    onChangeTitle={()=>this.changeTitleHandler(cars[1].name)}*/}
-        {/*/>*/}
-        {/*<Car*/}
-        {/*    name={cars[2].name}*/}
-        {/*    year={cars[2].yaer}*/}
-        {/*    onChangeTitle={()=>this.changeTitleHandler(cars[2].name)}*/}
-        {/*/>*/}
+          <div style={{
+              width: 400,
+              margin: 'auto',
+              paddingTop: '20px'
+          }}>
+              { cars }
+          </div>
       </div>
     );
   }
